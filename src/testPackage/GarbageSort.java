@@ -38,7 +38,7 @@ public class GarbageSort
 		for(int i = 0; i < size; i++)
 		{
 			Random random = new Random();
-			newArray[i] = random.nextInt(10);
+			newArray[i] = random.nextInt(); //Random int value between MIN_VALUE and MAX_VALUE
 		}
 		
 		return newArray;

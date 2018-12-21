@@ -6,7 +6,7 @@ public class Driver
 	public static void main(String[] args) 
 	{
 		//int[] values = {5, 4, 7, 8, 2, 9};
-		int[] vals = {1, 6, 3, 1, 0};
+		int[] vals = { 2, 1, 3, 6, 9, 0 };
 		
 		GarbageSort.printArray(vals);
 		GarbageSort.sort(vals);
