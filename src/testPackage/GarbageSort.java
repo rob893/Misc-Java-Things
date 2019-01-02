@@ -9,12 +9,13 @@ public class GarbageSort
 	public static void sort(int[] arr)
 	{
 		int[] sortedArr = getNewArray(arr.length);
-		
+		int i = 1;
 		while(!isSorted(sortedArr) || !checkIfContainsSame(arr, sortedArr))
 		{
+			i++;
 			sortedArr = getNewArray(arr.length);
 		}
-		
+		System.out.println(i);
 		System.arraycopy(sortedArr, 0, arr, 0, arr.length);
 	}
 	
@@ -38,7 +39,7 @@ public class GarbageSort
 		for(int i = 0; i < size; i++)
 		{
 			Random random = new Random();
-			newArray[i] = random.nextInt(); //Random int value between MIN_VALUE and MAX_VALUE
+			newArray[i] = random.nextInt(10000); //Random int value between MIN_VALUE and MAX_VALUE
 		}
 		
 		return newArray;
