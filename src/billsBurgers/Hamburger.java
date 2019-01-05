@@ -95,6 +95,7 @@ public class Hamburger extends FoodItem{
 				this.completeBurger = newBurger;
 				break;
 			default:
+				System.out.println("Invalid topping!");
 				return;
 		}
 		
