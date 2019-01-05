@@ -207,4 +207,70 @@ public class JavaUdemyExercises {
 		System.out.println("Min: " + min + " Max: " + max);
 		scanner.close();
 	}
+	
+	public static int[] getIntegers(int num)
+	{
+		Scanner scanner = new Scanner(System.in);
+		int[] result = new int[num];
+		System.out.println("Enter " + num + " numbers.");
+		
+		
+		for(int i = 0; i < result.length; i++)
+		{
+			result[i] = scanner.nextInt();
+		}
+		
+		scanner.close();
+		return result;
+	}
+	
+	public static void printArray(int[] arr)
+	{
+		for(int i = 0; i < arr.length; i++)
+		{
+			System.out.println(arr[i]);
+		}
+	}
+	
+	public static int[] sortDesc(int[] arr)
+	{
+		int[] result = arr.clone();
+		
+		for(int i = 0; i< result.length - 1; i++)
+		{
+			for(int j = i + 1; j < result.length; j++)
+			{
+				if(result[i] < result[j])
+				{
+					int temp = result[i];
+					result[i] = result[j];
+					result[j] = temp;
+				}
+			}
+		}
+		
+		return result;
+	}
+	
+	public static int findMin(int[] arr)
+	{
+		int min = Integer.MAX_VALUE;
+		
+		for(int i = 0; i < arr.length; i++)
+		{
+			min = Math.min(min, arr[i]);
+		}
+		
+		return min;
+	}
+	
+	public static void reverseArray(int[] arr)
+	{
+		for(int i = 0, j = arr.length - 1; i < j; i++, j--)
+		{
+			int temp = arr[i];
+			arr[i] = arr[j];
+			arr[j] = temp;
+		}
+	}
 }
