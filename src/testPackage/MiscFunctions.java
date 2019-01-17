@@ -130,4 +130,36 @@ public class MiscFunctions
 		Arrays.sort(arr);
 		return arr[1];
 	}
+	
+	public static void fizzBuzzRec(int n)
+	{
+		if(n <= 0 || n > 100)
+		{
+			return;
+		}
+
+		if(n % 3 == 0 && n % 5 == 0)
+		{
+			System.out.println("FizzBuzz");
+		}
+		else if(n % 3 == 0)
+		{
+			System.out.println("Fizz");
+		}
+		else if(n % 5 == 0)
+		{
+			System.out.println("Buzz");
+		}
+		else 
+		{
+			System.out.println(n);
+		}
+		
+		fizzBuzzRec(n + 1);
+	}
+	
+	public static void testMod(int n)
+	{
+		System.out.println(5 % n);
+	}
 }
